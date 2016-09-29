@@ -1,0 +1,2 @@
+This is a Wordpress theme for [Assists.be](http://www.assists.be). It is based on the Shoreditch theme.
+The Shoreditch theme is/was GPL v2 licensed and so this modified theme is also licensed under the GPL v2.
