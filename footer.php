@@ -18,9 +18,6 @@
 			<?php shoreditch_social_menu(); ?>
 
 			<div class="site-info">
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'shoreditch' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'shoreditch' ), 'WordPress' ); ?></a>
-				<span class="sep">/</span>
-				<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'shoreditch' ), 'Shoreditch', '<a href="https://wordpress.com/themes/" rel="designer">Automattic</a>' ); ?>
 			</div><!-- .site-info -->
 		</div><!-- .site-footer-wrapper -->
 	</footer><!-- #colophon -->
