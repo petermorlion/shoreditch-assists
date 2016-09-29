@@ -8,7 +8,7 @@ gulp.task('clean', (cb) => {
 
 gulp.task('package', () => {
     return gulp.src(['./src/**'])
-        .pipe(zip('archive.zip'))
+        .pipe(zip('shoreditch-assists.zip'))
         .pipe(gulp.dest('dist'));
 });
 
