@@ -1,8 +1,15 @@
-var gulp = require('gulp');
-var zip  = require('gulp-zip');
+var gulp   = require('gulp');
+var zip    = require('gulp-zip');
+var rimraf = require('rimraf'); 
 
-gulp.task('default', () => {
-    return gulp.src(['./**/!(readme.md|license.md|.gitignore)'])
+gulp.task('clean', (cb) => {
+    rimraf('./dist', cb);
+});
+
+gulp.task('package', () => {
+    return gulp.src(['./src/**'])
         .pipe(zip('archive.zip'))
         .pipe(gulp.dest('dist'));
 });
+
+gulp.task('default', ['clean', 'package']);

@@ -18,6 +18,7 @@
   "homepage": "https://github.com/petermorlion/shoreditch-assists#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-zip": "^3.2.0"
+    "gulp-zip": "^3.2.0",
+    "rimraf": "^2.5.4"
   }
 }
