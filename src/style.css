@@ -1621,9 +1621,11 @@ a:hover {
 }
 
 .hentry {
-	border-bottom: 1px solid #f3f3f3;
-	margin: 0 0 1.5em;
 	padding-top: 1.5em;
+}
+
+.hentry.has-post-thumbnail {
+	margin: 0 0 1.5em;
 }
 
 .hentry:last-of-type {
@@ -3520,7 +3522,7 @@ div#jp-relatedposts a:focus {
 	}
 
 	/* Content */
-	.hentry {
+	.hentry.has-post-thumbnail {
 		padding-top: 3em;
 		padding-bottom: 1.5em;
 	}
@@ -4714,7 +4716,7 @@ div#jp-relatedposts a:focus {
 	}
 
 	/* Content */
-	.hentry {
+	.hentry.has-post-thumbnail {
 		padding-bottom: 3em;
 		padding-top: 4.5em;
 	}
@@ -4972,7 +4974,7 @@ div#jp-relatedposts a:focus {
 	}
 
 	/* Content */
-	.hentry {
+	.hentry.has-post-thumbnail {
 		padding-bottom: 4.5em;
 		padding-top: 6em;
 	}
