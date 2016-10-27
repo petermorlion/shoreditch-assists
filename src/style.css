@@ -321,7 +321,7 @@ h6,
 	color: #2c313f;
 	font-family: Poppins, sans-serif;
 	font-weight: bold;
-	margin: 0 0 1.5rem;
+	margin: 1.5rem 0 1.5rem;
 }
 
 .featured-content .hentry.has-post-thumbnail h1,
@@ -1999,6 +1999,31 @@ a:hover {
 
 .page-template-panel-page .hentry.has-post-thumbnail .hentry-wrapper {
 	position: relative;
+}
+
+/*--------------------------------------------------------------
+## Column pages
+--------------------------------------------------------------*/
+.column-main {
+	margin-left: -10px;
+	margin-right: -10px;
+}
+
+.column-page-column {
+	float: left;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.column-page-column h3 {
+	font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+    .column-page-column {
+        width: 32%;
+    }
 }
 
 /*--------------------------------------------------------------
@@ -3686,7 +3711,7 @@ div#jp-relatedposts a:focus {
 	h4,
 	h5,
 	h6 {
-		margin: 0 0 1.875rem;
+		margin: 1.875rem 0 1.875rem;
 	}
 
 	.widget-small h1,

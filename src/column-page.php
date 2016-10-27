@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Panel Page Template
+ * Template Name: Column Page Template
  *
  * @package Shoreditch
  */
@@ -12,8 +12,8 @@ get_header(); ?>
 
 			<?php
 			while ( have_posts() ) : the_post();
-
-			    get_template_part( 'template-parts/content', 'panel-page' );
+			
+				get_template_part( 'template-parts/content', 'column-page' );
 
 			endwhile; // End of the loop.
 			?>
@@ -30,33 +30,11 @@ get_header(); ?>
 			?>
 
 			<?php
-			$column_count = 0;
-
 			if ( $child_pages->have_posts() ) :
 
 				while ( $child_pages->have_posts() ) : $child_pages->the_post();
 
-					// panel pages can have column pages as children
-					$page_template_slug = get_page_template_slug();
-					$page_type = 'panel-page';
-
-					if ($page_template_slug == 'column-page.php') {
-						if ($column_count == 0) {
-							// Start the outer div
-							echo "<div class='column-main'>";
-						}
-
-						$column_count += 1;
-						$page_type = 'column-page';
-					} 
-
-					get_template_part( 'template-parts/content', $page_type );
-
-					if (($column_count > 0 && $page_type != 'column-page') || $column_count == 3) {
-						// close the outer div
-						echo "</div>";
-						echo "<div style='clear:both;'></div>";
-					}
+					get_template_part( 'template-parts/content', 'column-page' );
 
 				endwhile; // End of the loop.
 
