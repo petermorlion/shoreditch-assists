@@ -34,6 +34,7 @@ Text Domain: shoreditch
 	## Posts & Pages
 	## Featured Content
 	## Panel Page Template
+	## Column Page Template
 	## Comments
 # Media
 	## Captions
@@ -2028,6 +2029,7 @@ a:hover {
 .column-page-column .hentry-wrapper {
 	margin-left: 0;
 	margin-right: 0;
+	width: 100%;
 }
 
 .column-page-column-img {
