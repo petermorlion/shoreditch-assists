@@ -42,9 +42,11 @@ add_filter( 'body_class', 'shoreditch_body_classes' );
 
 /**
  * Add featured image as background image.
+ *
+ * @param string $size Size, defaults to 'post-thumbnail'
  */
-function shoreditch_background_image() {
-	$image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'post-thumbnail' );
+function shoreditch_background_image($size = 'post-thumbnail') {
+	$image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), $size );
 
 	if ( ! is_array( $image ) ) {
 		return;

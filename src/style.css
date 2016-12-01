@@ -854,6 +854,14 @@ label {
 	margin-top: 1.5em;
 }
 
+/* Formidable forms */
+.frm_form_fields {
+	border: 1px solid #7a7c84;
+	padding: 20px;
+	border-radius: 5px;
+	margin-bottom: 30px;
+}
+
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
@@ -2005,8 +2013,9 @@ a:hover {
 ## Column pages
 --------------------------------------------------------------*/
 .column-main {
-	margin-left: -10px;
-	margin-right: -10px;
+	margin: 0 auto;
+	width: 80%;
+	width: calc(100% - 12em);
 }
 
 .column-page-column {
@@ -2014,6 +2023,19 @@ a:hover {
     width: 100%;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.column-page-column .hentry-wrapper {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.column-page-column-img {
+	width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border-radius: 75px;
 }
 
 .column-page-column h3 {
@@ -3328,7 +3350,8 @@ div#jp-relatedposts a:focus {
 /*--------------------------------------------------------------
 ## Buttons
 --------------------------------------------------------------*/
-.button {
+/* Include button of Formidable Form contact form */
+.button, #frm-submit-shoreditch-assists { 
 	background: #007381;
 	border: 0;
 	border-radius: 5em;
@@ -3347,12 +3370,17 @@ div#jp-relatedposts a:focus {
 
 .button,
 .button:focus,
-.button:hover {
+.button:hover,
+#frm-submit-shoreditch-assists,
+#frm-submit-shoreditch-assists:focus,
+#frm-submit-shoreditch-assists:hover {
 	color: #fff;
 }
 
 .button:focus,
-.button:hover {
+.button:hover,
+#frm-submit-shoreditch-assists:focus,
+#frm-submit-shoreditch-assists:hover {
 	background: #2c313f;
 }
 

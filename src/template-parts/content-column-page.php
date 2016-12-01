@@ -9,9 +9,10 @@
 
 ?>
 
-<article class="column-page-column" id="post-<?php the_ID(); ?>" <?php post_class(); shoreditch_background_image(); ?>>
-	<!--FEATURED IMAGE:<div class="aanpak-img aanpak-coaching"></div>-->
+<article class="column-page-column" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
 	<div class="hentry-wrapper">
+		<div class="column-page-column-img" <?php shoreditch_background_image('thumbnail'); ?>></div>
 		<header class="entry-header">
 			<?php
 				the_title( '<h3 class="entry-title">', '</h3>' );

@@ -43,7 +43,7 @@ get_header(); ?>
 					if ($page_template_slug == 'column-page.php') {
 						if ($column_count == 0) {
 							// Start the outer div
-							echo "<div class='column-main'>";
+							echo "<div class='column-main hentry-wrapper'>";
 						}
 
 						$column_count += 1;
@@ -54,8 +54,8 @@ get_header(); ?>
 
 					if (($column_count > 0 && $page_type != 'column-page') || $column_count == 3) {
 						// close the outer div
-						echo "</div>";
 						echo "<div style='clear:both;'></div>";
+						echo "</div>";						
 					}
 
 				endwhile; // End of the loop.
