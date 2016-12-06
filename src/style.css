@@ -59,6 +59,7 @@ Text Domain: shoreditch
 	## x >= 768px
 	## x >= 896px
 	## x >= 1020px
+# Custom for Assists.be
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -2045,8 +2046,12 @@ a:hover {
 }
 
 @media (min-width: 768px) {
-    .column-page-column {
+    .column-main-3 .column-page-column {
         width: 32%;
+    }
+
+	.column-main-2 .column-page-column {
+        width: 50%;
     }
 }
 
@@ -5097,4 +5102,11 @@ div#jp-relatedposts a:focus {
 		padding-top: 6em;
 	}
 
+}
+/*--------------------------------------------------------------
+# Custom for Assists.be
+--------------------------------------------------------------*/
+/* Diensten (balloons) */
+#post-11, #post-359, #post-350, #post-265 {
+  background-position: 50% 40%;
 }

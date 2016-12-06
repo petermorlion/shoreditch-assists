@@ -31,8 +31,24 @@ get_header(); ?>
 
 			<?php
 			$column_count = 0;
+			$total_column_count = 0;
 
 			if ( $child_pages->have_posts() ) :
+				while ( $child_pages->have_posts() ) : $child_pages->the_post();
+					$page_template_slug = get_page_template_slug();
+					if ($page_template_slug == 'column-page.php') {
+						$total_column_count += 1;
+					}
+				endwhile; // End of the loop.
+			endif;
+
+			if ( $child_pages->have_posts() ) :
+
+				$column_spread = 2; // default to having 2 columns
+
+				if ($total_column_count % 3 == 0) {
+					$column_spread = 3;
+				}
 
 				while ( $child_pages->have_posts() ) : $child_pages->the_post();
 
@@ -43,7 +59,7 @@ get_header(); ?>
 					if ($page_template_slug == 'column-page.php') {
 						if ($column_count == 0) {
 							// Start the outer div
-							echo "<div class='column-main hentry-wrapper'>";
+							echo "<div class='column-main hentry-wrapper column-main-" . $column_spread . "'>";
 						}
 
 						$column_count += 1;
@@ -52,10 +68,11 @@ get_header(); ?>
 
 					get_template_part( 'template-parts/content', $page_type );
 
-					if (($column_count > 0 && $page_type != 'column-page') || $column_count == 3) {
+					if (($column_count > 0 && $page_type != 'column-page') || $column_count == $column_spread) {
 						// close the outer div
 						echo "<div style='clear:both;'></div>";
-						echo "</div>";						
+						echo "</div>";
+						$column_count = 0;					
 					}
 
 				endwhile; // End of the loop.
