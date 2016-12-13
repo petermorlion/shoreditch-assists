@@ -2018,6 +2018,7 @@ a:hover {
 	margin: 0 auto;
 	width: 80%;
 	width: calc(100% - 12em);
+	display: table-row;
 }
 
 .column-page-column {
@@ -2045,13 +2046,35 @@ a:hover {
 	font-size: 1rem;
 }
 
+.column-page-column p.call-to-action {
+	text-align: center;
+}
+
 @media (min-width: 768px) {
+	.column-main {
+        display: table;
+	}
+
+	.column-page-column {
+		display: table-cell;
+        position: relative;
+        padding-bottom: 2em;
+		float: none;
+	}
+
     .column-main-3 .column-page-column {
         width: 32%;
     }
 
 	.column-main-2 .column-page-column {
         width: 50%;
+    }
+
+	.column-page-column p.call-to-action {
+        display: block; 
+		position: absolute; 
+		bottom: 0;
+		width: 90%;
     }
 }
 
