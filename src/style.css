@@ -407,7 +407,7 @@ i {
 address,
 p,
 pre {
-	margin: 0 0 1.5em;
+	margin: 0 0;
 }
 
 blockquote {
@@ -1011,6 +1011,7 @@ label {
 
 .widget-footer-top-area {
 	background: #007381;
+	margin-top: 30px;
 }
 
 .widget-footer-bottom-area {
