@@ -5127,10 +5127,3 @@ div#jp-relatedposts a:focus {
 	}
 
 }
-/*--------------------------------------------------------------
-# Custom for Assists.be
---------------------------------------------------------------*/
-/* Diensten (balloons) */
-#post-11, #post-359, #post-350, #post-265, #post-502 {
-  background-position: 50% 40%;
-}
